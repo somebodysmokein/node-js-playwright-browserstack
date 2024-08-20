@@ -9,6 +9,13 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+# Set variables once
+variables:
+ - name: BROWSERSTACK_USERNAME
+   value: venkateshr_0PiUN7
+ - name: BROWSERSTACK_ACCESS_KEY
+   value: vBLgo6g3wxZVo3KZwVh3  
+
 steps:
 - task: NodeTool@0
   inputs:
@@ -17,5 +24,5 @@ steps:
 
 - script: |
     npm install
-    npx 
+    npm run sample-test 
   displayName: 'npm install and build'
