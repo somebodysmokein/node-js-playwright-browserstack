@@ -8,7 +8,7 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-
+  
 steps:
 - task: NodeTool@0
   inputs:
@@ -17,5 +17,5 @@ steps:
 
 - script: |
     npm install
-    npx 
+    npm run sample-test 
   displayName: 'npm install and build'
